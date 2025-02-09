@@ -46,15 +46,15 @@ run:
 
 clean:
 	find ./faucet -type d -name "__pycache__" -exec rm -rf {} +
-	find ./faucet -type f -name "*./faucetpyc" -delete
-	find ./faucet -type f -name "*./faucetpyo" -delete
-	find ./faucet -type f -name "*./faucetpyd" -delete
-	find ./faucet -type f -name "./faucetcoverage" -delete
-	find ./faucet -type d -name "*./faucetegg-info" -exec rm -rf {} +
-	find ./faucet -type d -name "*./faucetegg" -exec rm -rf {} +
-	find ./faucet -type d -name "./faucetpytest_cache" -exec rm -rf {} +
-	find ./faucet -type d -name "./faucetmypy_cache" -exec rm -rf {} +
-	find ./faucet -type d -name "./faucetcoverage" -exec rm -rf {} +
+	find ./faucet -type f -name "./faucet/*.pyc" -delete
+	find ./faucet -type f -name "./faucet/*.pyo" -delete
+	find ./faucet -type f -name "./faucet/*.pyd" -delete
+	find ./faucet -type f -name "./faucet/coverage" -delete
+	find ./faucet -type d -name "./faucet/*.egg-info" -exec rm -rf {} +
+	find ./faucet -type d -name "./faucet/*.egg" -exec rm -rf {} +
+	find ./faucet -type d -name "./faucet/pytest_cache" -exec rm -rf {} +
+	find ./faucet -type d -name "./faucet/.mypy_cache" -exec rm -rf {} +
+	find ./faucet -type d -name "./faucet/coverage" -exec rm -rf {} +
 	find ./faucet -type d -name "htmlcov" -exec rm -rf {} +
 
 setup: dev-install migrate
