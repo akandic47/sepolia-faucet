@@ -1,0 +1,9 @@
+[flake8]
+max-line-length = 100
+max_complexity = 10
+inline-quotes = double
+multiline-quotes = double
+docstring-quotes = double
+
+require-code = True
+ignore = FI51,FI10,FI12,FI13,FI14,FI15,FI16,FI17,FI18,FI50,FI52,FI53,FI54,FI55,FI56,FI57,W503,E203
